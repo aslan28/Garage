@@ -6,7 +6,7 @@ public class Motorcycle extends Vehicle {
 
 	public Motorcycle(int id, String manufacturer, String modelVariant, boolean isCar, boolean isMotorcycle, boolean isVan)
 	{
-		super(id, isCar, isMotorcycle,isVan);
+		super(id, manufacturer, isCar, isMotorcycle,isVan);
 		
 		this.model = modelVariant;
 		//this.year = dateOfReg;
@@ -16,8 +16,10 @@ public class Motorcycle extends Vehicle {
 	public int getYear()
 		return year;
 	*/
-	public String getModel()
+	public String getModel(){
 		return model;
+	}
+
 	
 	/**
 	 * This method returns a String to represent a car
