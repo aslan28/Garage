@@ -17,8 +17,19 @@ class Garage {
 	*/
 
 	public static void main(String[] args) {
-		Car car1 = new Car("Ford", "Focus", 2005);
-		Car car2 = new Car("BMW", "116i", 2006);
+		Car c1 = new Car("Ford", "Focus", 2005);
+		Car c2 = new Car("BMW", "116i", 2006);
+		Van v1 = new Van("","",2006);
+		Van v2 = new Van("","",2006);
+		Motorcycle m1 = new Motorcycle("","",2006);
+		Motorcycle m2 = new Motorcycle("","",2006);
+
+		System.out.println(c1);
+		System.out.println(c2);
+		System.out.println(v1);
+		System.out.println(v2);
+		System.out.println(m1);
+		System.out.println(m2);
 
 		System.out.println(car1);
 		System.out.println(car2);
