@@ -5,18 +5,20 @@ public class Car extends Vehicle {
 	private String gearType;
 
 	public Car(int id, String manufacturer, boolean isCar, boolean isMotorcycle, boolean isVan, String gearType, int seats) {
-		super(id, manufacturer, isCar, isMotorcycle, isVan);
+		super(id, manufacturer, isCar, false, false);
 
 		this.seats = seats;
 		this.gearType = gearType;
 	} // end of constructor
 
 	
-	public int getSeats()
+	public int getSeats() {
 		return seats;
+	}
 	
-	public String getGearType()
+	public String getGearType() {
 		return gearType;
+	}
 	/**
 	 * This method returns a String to represent a car
 	 * 
