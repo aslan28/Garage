@@ -71,19 +71,19 @@ class Garage {
 	}*/
 
 	public static void main(String[] args) {
-		Car c1 = new Car(1, "Ford", true, false, false, "Manual", 5);
-		/*Car c2 = new Car(2, "BMW", true, false, false, "Manual", 5);
-		Van v1 = new Van(3, "Fiat", false, false, true, "Fiat", 3);
-		Van v2 = new Van(4, "Citreon", false, false, true, "Citreon", 4);
-		Motorcycle m1 = new Motorcycle(5, "BMW", false, true, false, "bmw", 5);
-		Motorcycle m2 = new Motorcycle(6, "Kawasaki", false, true, false, "kawasaki", 5);
-
-		System.out.println(c1);
-		System.out.println(c2);
-		System.out.println(v1);
-		System.out.println(v2);
-		System.out.println(m1);*/
+		Car c1 = new Car(1, "Ford", false, false, true, "Manual", 5);
+		Car c2 = new Car(2, "BMW", true, false, false, "Manual", 5);
+		Van v1 = new Van(3, "Fiat", "Doblo", false, false, true);
+		Van v2 = new Van(4, "Ford", "Transit", false, false, true);
+		Motorcycle m1 = new Motorcycle(5, "BMW", 600, "Petrol", false, true, false);
+		Motorcycle m2 = new Motorcycle(6, "Kawasaki", 600, "Petrol", false, true, false);
+		
 		addVehicle(c1);
+		addVehicle(c2);
+		addVehicle(v1);
+		addVehicle(v2);
+		addVehicle(m1);
+		addVehicle(m2);
 		
 		System.out.println(vehicleList);
 	}// end of main method
