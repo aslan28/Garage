@@ -1,23 +1,25 @@
 public class Motorcycle extends Vehicle {
 
 	// private variables to store the attributes of a motorcycle
-	private String model="";
+	private String fuelType = "";
+	private int cc;
 	//private int year;
 
-	public Motorcycle(int id, String manufacturer, String modelVariant, boolean isCar, boolean isMotorcycle, boolean isVan)
+	public Motorcycle(int id, String manufacturer, int cc, String fuelType, boolean isCar, boolean isMotorcycle, boolean isVan)
 	{
-		super(id, manufacturer, isCar, isMotorcycle,isVan);
+		super(id, manufacturer, isCar, isMotorcycle, isVan);
 		
-		this.model = modelVariant;
-		//this.year = dateOfReg;
+		this.fuelType = fuelType;
+		this.cc = cc;
 	} // end of constructor
 
-	/*
-	public int getYear()
-		return year;
-	*/
-	public String getModel(){
-		return model;
+
+	public String getFuelType() {
+		return fuelType;
+	}
+
+	public double getCc() {
+		return cc;
 	}
 
 	
