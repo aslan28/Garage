@@ -52,7 +52,7 @@ public class Vehicle {
             s="Motorcycle";
 
 
-        return ("ID: "+this.getID()+"\nmanufacturer: "+this.getManufacturer()+"\nVehicle Type: "+s+"\n\n");
+        return ("ID: "+this.getID()+"\nmanufacturer: "+this.getManufacturer()+"\nVehicle Type: "+s+"\n");
     }
 
 }
