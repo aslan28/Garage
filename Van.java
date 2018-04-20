@@ -1,19 +1,18 @@
 public class Van extends Vehicle {
 
-	// private variables to store the attributes of a van
-	private String gearType="";
-	//private int year;
+	// private variables to s="";tore the attributes of a van
+	private String variant = "";
 
-	public Van(int id, String manufacturer, String gearType, boolean isCar, boolean isMotorcycle, boolean isVan)
+	public Van(int id, String manufacturer, String variant, boolean isCar, boolean isMotorcycle, boolean isVan)
 	{
 		super(id, manufacturer, isCar, isMotorcycle,isVan);
-		this.gearType = gearType;
+		this.variant = variant;
 		
 	} // end of constructor
 
-	public String getGearType()
+	public String getVariantType()
 	{
-		return gearType;
+		return variant;
 	}
 	/**
 	 * This method returns a String to represent a car
