@@ -2,6 +2,8 @@ public class Vehicle {
 	private boolean isCar; // changed all the fields to private
 	private boolean isMotorcycle;
 	private boolean isVan;
+	
+	// private variables to store the attributes: manufacturer and vehicle ID
 	private String manufacturer = "";
 	private int id;
 
