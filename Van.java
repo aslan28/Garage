@@ -1,6 +1,6 @@
 public class Van extends Vehicle {
 
-	// private variables to s="";tore the attributes of a van
+	// private variables to store the attributes of a motorcycle
 	private String variant = "";
 
 	public Van(int id, String manufacturer, String variant, boolean isCar, boolean isMotorcycle, boolean isVan) {
