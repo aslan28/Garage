@@ -5,7 +5,7 @@ import java.util.List;
 
 class Garage {
 
-	public static java.util.List<Vehicle> vehicleList = new ArrayList<>();
+	public static List<Vehicle> vehicleList = new ArrayList<>();
 
 	private static void addVehicle(Vehicle v) {
 		vehicleList.add(v);
@@ -16,7 +16,7 @@ class Garage {
 	}
 
 	private static void removeVehicle(int id) {
-		Iterator i = vehicleList.iterator();
+		Iterator<Vehicle> i = vehicleList.iterator();
 		while (i.hasNext()) {
 			Vehicle veh = (Vehicle) i.next();
 			if (veh.getID() == id) {
@@ -25,9 +25,9 @@ class Garage {
 		}
 	}
 
-	private static void emptyList() {
-		vehicleList.clear();
-	}
+	//private static void emptyList() {
+		//vehicleList.clear();
+	//}
 
 	private static float generateBill(Vehicle v) {
 		float total = 0.00f;
@@ -60,10 +60,10 @@ class Garage {
 	}
 
 	public static void main(String[] args) {
-		Car c1 = new Car(1, "Ford", false, false, true, "Manual", 5);
-		Car c2 = new Car(2, "BMW", true, false, false, "Manual", 5);
+		Car c1 = new Car(1, "Ford", true, false, false, "Manual", 5);
+		Car c2 = new Car(2, "BMW-1Series", true, false, false, "Manual", 5);
 		Van v1 = new Van(3, "Fiat", "Doblo", false, false, true);
-		Van v2 = new Van(4, "Ford", "Transit", false, false, true);
+		Van v2 = new Van(4, "Mercedes-Benz", "Sprinter", false, false, true);
 		Motorcycle m1 = new Motorcycle(5, "BMW", 600, "Petrol", false, true, false);
 		Motorcycle m2 = new Motorcycle(6, "Kawasaki", 600, "Petrol", false, true, false);
 
@@ -74,14 +74,12 @@ class Garage {
 		addVehicle(m1);
 		addVehicle(m2);
 
-		System.out.println(vehicleList);
+		System.out.println("Current vehicles in the garage:\n" + vehicleList + "\n\nBill Calculation (VAT inclusive):");
 
-		System.out.println("Generate bill for v2");
-		System.out.println(generateBill(v2));
-
-		System.out.println("\n\nRemoving c2 from the list using vehicle type");
-		removeVehicle(c2);
-		// System.out.println(getList());
-		System.out.println(vehicleList);
+		System.out.println("Total Bill for BMW-1Series: " + generateBill(c2));
+		System.out.println("Total Bill for Mercedez-Benz: " + generateBill(v2));
+		System.out.println("Total Bill for Kawasaki: " + generateBill(m2) + "\n\n");
+		
+		System.out.println("Total vehicles now present in the garage" + vehicleList);
 	}// end of main method
 }
