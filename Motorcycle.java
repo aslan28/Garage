@@ -1,15 +1,22 @@
-public class Van extends Vehicle {
+public class Motorcycle extends Vehicle {
 
 	// private variables to store the attributes of a motorcycle
-	private String variant = "";
+	private String fuelType = "";
+	private int cc;
 
-	public Van(int id, String manufacturer, String variant, boolean isCar, boolean isMotorcycle, boolean isVan) {
-		super(id, manufacturer, false, false, true);
-		this.variant = variant;
+	public Motorcycle(int id, String manufacturer, int cc, String fuelType, boolean isCar, boolean isMotorcycle,
+			boolean isVan) {
+		super(id, manufacturer, false, true, false);
 
+		this.fuelType = fuelType;
+		this.cc = cc;
 	} // end of constructor
 
-	public String getVariantType() {
-		return variant;
+	public String getFuelType() {
+		return fuelType;
+	}
+
+	public double getCc() {
+		return cc;
 	}
 }
