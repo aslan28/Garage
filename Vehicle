@@ -1,58 +1,47 @@
 public class Vehicle {
-    private boolean isCar;		//changed all the fields to private
-    private boolean isMotorcycle;
-    private boolean isVan;
-    private String manufacturer = "";
-    private int id;
+	private boolean isCar; // changed all the fields to private
+	private boolean isMotorcycle;
+	private boolean isVan;
+	private String manufacturer = "";
+	private int id;
 
-    //private String make, model, regID;
-    //private int year;
+	public Vehicle(int id, String manufacturer, boolean isCar, boolean isMotorcycle, boolean isVan) {
+		this.isCar = isCar;
+		this.isMotorcycle = isMotorcycle;
+		this.isVan = isVan;
+		this.manufacturer = manufacturer;
+		this.id = id;
+	}
 
-    public Vehicle(int id, String manufacturer, boolean isCar, boolean isMotorcycle, boolean isVan) {
-        this.isCar = isCar;
-        this.isMotorcycle = isMotorcycle;
-        this.isVan = isVan;
-        this.manufacturer = manufacturer;
-        this.id = id;
-    }
+	public int getID() {
+		return id;
+	}
 
-    public int getID()
-    {
-        return id;
-    }
+	public String getManufacturer() {
+		return manufacturer;
+	}
 
-    public String getManufacturer()
-    {
-        return manufacturer;
-    }
+	public boolean isVan() {
+		return isVan;
+	}
 
-    public boolean isVan()
-    {
-        return isVan;
-    }
+	public boolean isCar() {
+		return isCar;
+	}
 
-    public boolean isCar()
-    {
-        return isCar;
-    }
+	public boolean isMotorcycle() {
+		return isMotorcycle;
+	}
 
-    public boolean isMotorcycle()
-    {
-        return isMotorcycle;
-    }
+	public String toString() {
+		String vehicleType = "";
+		if (this.isVan())
+			vehicleType = "Van";
+		else if (this.isCar)
+			vehicleType = "Car";
+		else
+			vehicleType = "Motorcycle";
 
-    public String toString()
-    {
-        String s ="";
-        if(!this.isVan())
-            s="Van";
-        else if(!this.isCar)
-            s="Car";
-        else
-            s="Motorcycle";
-
-
-        return ("ID: "+this.getID()+"\nmanufacturer: "+this.getManufacturer()+"\nVehicle Type: "+s+"\n");
-    }
-
+		return (" ID: " + this.getID() + ", manufacturer: " + this.getManufacturer() + ", Vehicle Type: " + vehicleType);
+	}
 }
