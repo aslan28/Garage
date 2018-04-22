@@ -6,10 +6,10 @@ public class Motorcycle extends Vehicle {
 
 	public Motorcycle(int id, String manufacturer, int cc, String fuelType, boolean isCar, boolean isMotorcycle,
 			boolean isVan) {
-		super(id, manufacturer, false, true, false);
+		super(id, manufacturer, false, true, false); // importing the characteristics of vehicle to car
 
-		this.fuelType = fuelType;
-		this.cc = cc;
+		this.fuelType = fuelType; // variable fuelType for motorcycle
+		this.cc = cc; // variable engine size (cc) for motorcycle
 	} // end of constructor
 
 	public String getFuelType() {
