@@ -2,11 +2,13 @@ public class Vehicle {
 	private boolean isCar; // changed all the fields to private
 	private boolean isMotorcycle;
 	private boolean isVan;
-	
+
 	// private variables to store the attributes: manufacturer and vehicle ID
 	private String manufacturer = "";
 	private int id;
 
+	// public variables for vehicles and boolean methods to confirm the type of
+	// vehicle
 	public Vehicle(int id, String manufacturer, boolean isCar, boolean isMotorcycle, boolean isVan) {
 		this.isCar = isCar;
 		this.isMotorcycle = isMotorcycle;
@@ -35,7 +37,7 @@ public class Vehicle {
 		return isMotorcycle;
 	}
 
-	public String toString() {
+	public String toString() { // overriding string to string method to display the output as a string
 		String vehicleType = "";
 		if (this.isVan())
 			vehicleType = "Van";
@@ -44,6 +46,7 @@ public class Vehicle {
 		else
 			vehicleType = "Motorcycle";
 
-		return (" ID: " + this.getID() + ", manufacturer: " + this.getManufacturer() + ", Vehicle Type: " + vehicleType);
+		return (" ID: " + this.getID() + ", manufacturer: " + this.getManufacturer() + ", Vehicle Type: "
+				+ vehicleType);
 	}
 }
